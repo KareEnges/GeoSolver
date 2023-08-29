@@ -11,7 +11,7 @@ class Constraint:
         self.surface_surface_angle_constraints = {}  # 存储面面角约束，格式为 {((面1点编号1, 面1点编号2, 面1点编号3), (面2点编号1, 面2点编号2,
         # 面2点编号3)): 目标角度}
         self.area_constraints = {}  # 存储面积约束，格式为 {(点编号1, 点编号2, ..., 点编号N): 目标面积}
-        self.symmetric_constraints = []  # 存储对称约束，格式为 {(点编号1, 点编号2):(对称线点1，点2), ...}
+        self.symmetric_constraints = {}  # 存储对称约束，格式为 {(点编号1, 点编号2):(对称线点1，点2), ...}
 
     def add_point(self, point_id, point: Point):
         self.points[point_id] = point
